@@ -4,7 +4,11 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "dev": "nodemon ./index.js",
+        "watch": "concurrently \"npm run dev\" \"npm run assets\"",
+        "assets": "webpack -w --display-max-modules 0",
+        "scss": "node-sass --watch scss -o css",
+        "build": "webpack --config webpack.config.js"
     },
     "keywords": [],
     "author": "daisho",
@@ -14,5 +18,20 @@
         "express": "^4.17.1",
         "express-handlebars": "^3.1.0",
         "serve-favicon": "^2.5.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.7.4",
+        "autoprefixer": "^9.7.3",
+        "babel-loader": "^8.0.6",
+        "babel-preset-env": "^1.7.0",
+        "concurrently": "^5.0.0",
+        "css-loader": "^3.2.1",
+        "extract-text-webpack-plugin": "^4.0.0-beta.0",
+        "node-sass": "^4.13.0",
+        "nodemon": "^2.0.1",
+        "postcss-loader": "^3.0.0",
+        "sass-loader": "^8.0.0",
+        "webpack": "^4.41.2",
+        "webpack-cli": "^3.3.10"
     }
 }

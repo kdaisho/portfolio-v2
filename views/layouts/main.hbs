@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=2, minimum-scale=.5, user-scalable=yes">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta charset="UTF-8">
+    <meta name="descrition" content="Daisho | Front-end Developer">
+    <meta name="keywords" content="front-end developer, web developer, JavaScript developer">
+    <meta name="author" content="Daisho Komiyama">
+    <meta property="og:title" content="Daisho | Front-end Developer">
+    <meta property="og:site_name" content="Daisho | Front-end Developer">
+    <meta property="og:url" content="http://daishodesign.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:description"
+        content="Hello! I’m a front-end developer based in Montreal. I’m passionate about building clean, fast websites, capitalizing on my educations and experience in applying best practices in this field.">
+    <meta property="og:image" content="http://daishodesign.com/images/fb-timeline-daisho.jpg">
+    <meta property="og:image:width" content="400">
+    {{!-- <meta name="google-site-verification" content="OlhG7TRcovkFpxQRpzwIoi93-s-lyitxK5r_8zQO4Gg" /> --}}
+    {{!-- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> --}}
+    <link rel="stylesheet" href="/dist/style.css">
+    {{!-- <link rel="shortcut icon" href="images/favi-logo.png"> --}}
+</head>
+
+<body>
+    <header class="main-header">
+        <div id="site_logo" class="site-logo" data-ng-include="'images/logo.svg'"></div>
+        <img id="alt_logo" class="alt-logo" src="images/logo-alt.svg" alt="daisho logo">
+        <ul class="social-icons">
+            <li>
+                <a href="//www.facebook.com/daisho.komiyama" target="_blank">
+                    <img src="images/icon-fb.svg" onError="this.onerror=null; this.src='images/icon-fb.png'"
+                        alt="facebook">
+                </a>
+            </li>
+            <li>
+                <a href="//www.linkedin.com/in/daisho-komiyama-6766657a?trk=nav_responsive_tab_profile_pic"
+                    target="_blank">
+                    <img src="images/icon-linkedin.svg" onError="this.onerror=null; this.src='images/icon-linkedin.png'"
+                        alt="linkedin">
+                </a>
+            </li>
+            <li>
+                <a href="//github.com/kdaisho" target="_blank">
+                    <img src="images/github.svg" onError="this.onerror=null; this.src='images/github.png'" alt="github">
+                </a>
+            </li>
+        </ul>
+        <img id="main-menu" src="images/menu.svg" onError="this.onerror=null; this.src='images/menu.png'" alt="menu">
+        <ul id="nav" style="right: -320px;">
+            <li>
+                <a href="https://github.com/kdaisho/Blog/wiki" target="_blank">
+                    <img class="nav-icon" src="images/icon-blog-opt.svg" alt="notebook">
+                    <span></span>BLOG
+                </a>
+            </li>
+            <li>
+                <a href="#about" class="link"><img class="nav-icon" src="images/icon-about-opt.svg"
+                        onError="this.onerror=null; this.src='images/icon-about.png'" alt="about me">
+                    <span></span>ABOUT
+                </a>
+            </li>
+            <li>
+                <a href="#work" class="link"><img class="nav-icon" src="images/icon-work-opt.svg"
+                        onError="this.onerror=null; this.src='images/icon-work.png'" alt="my work">
+                    <span></span>PROJECTS
+                </a>
+            </li>
+            <li>
+                <a href="#contact" class="link"><img class="nav-icon" src="images/icon-contact-opt.svg"
+                        onError="this.onerror=null; this.src='images/icon-contact.png'" alt="contact me">
+                    <span></span>CONTACT
+                </a>
+            </li>
+            <img id="close-nav" src="images/close-btn.svg" onError="this.onerror=null; this.src='images/close-btn.png'"
+                alt="close menu">
+        </ul>
+    </header>
+    {{{ body }}}
+</body>
+
+</html>
