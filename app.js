@@ -24,7 +24,7 @@ app.set("view engine", ".hbs");
 app.use(
     express.static(path.join(__dirname, "public"), {
         etag: true,
-        lastModified: true,
+        lastModified: false,
         setHeaders: (res, path) => {
             if (path.endsWith(".html")) {
                 res.setHeader("Cache-Control", "no-cache");
