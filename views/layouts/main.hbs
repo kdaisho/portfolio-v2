@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-touch">
 
 <head>
     <meta charset="UTF-8">
@@ -16,73 +16,43 @@
     <meta property="og:url" content="http://daishodesign.com/">
     <meta property="og:type" content="website">
     <meta property="og:description"
-        content="Hello! I’m a front-end developer based in Montreal. I’m passionate about building clean, fast websites, capitalizing on my educations and experience in applying best practices in this field.">
+        content="Hello! I’m a front-end developer based in Montreal. I’m passionate about building clean, performant web apps, capitalizing on my experience in applying best practices in this field.">
     <meta property="og:image" content="http://daishodesign.com/images/fb-timeline-daisho.jpg">
     <meta property="og:image:width" content="400">
     {{!-- <meta name="google-site-verification" content="OlhG7TRcovkFpxQRpzwIoi93-s-lyitxK5r_8zQO4Gg" /> --}}
-    {{!-- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> --}}
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="/dist/style.css">
     <link rel="shortcut icon" href="/images/favi-logo.png">
 </head>
 
 <body>
     <header class="main-header">
-        {{!-- <div id="site_logo" class="site-logo" data-ng-include="'/dist/images/logo.svg'"></div> --}}
         <div id="site_logo" class="site-logo">{{{getIcon "logo"}}}</div>
-        {{!-- <img id="alt_logo" class="alt-logo" src="/images/logo-alt.svg" alt="daisho logo"> --}}
         <ul class="social-icons">
+            {{#each data.social}}
             <li>
-                <a href="//www.facebook.com/daisho.komiyama" target="_blank">
-                    <img src="/images/icon-fb.svg" onError="this.onerror=null; this.src='images/icon-fb.png'"
-                        alt="facebook">
+                <a href="{{this.url}}" target="_black">
+                    <img src="/images/{{this.fileName}}" alt="{{this.name}}">
                 </a>
             </li>
-            <li>
-                <a href="//www.linkedin.com/in/daisho-komiyama-6766657a?trk=nav_responsive_tab_profile_pic"
-                    target="_blank">
-                    <img src="/images/icon-linkedin.svg"
-                        onError="this.onerror=null; this.src='/dist/images/icon-linkedin.png'" alt="linkedin">
-                </a>
-            </li>
-            <li>
-                <a href="//github.com/kdaisho" target="_blank">
-                    <img src="/images/github.svg" onError="this.onerror=null; this.src='/dist/images/github.png'"
-                        alt="github">
-                </a>
-            </li>
+            {{/each}}
         </ul>
-        <img id="main-menu" src="/images/menu.svg" onError="this.onerror=null; this.src='/dist/images/menu.png'"
-            alt="menu">
-        <ul id="nav" style="right: -320px;">
+        <img id="main-menu" src="/images/menu.svg" alt="menu">
+        <ul id="nav" class="nav" style="right: -320px;">
+            {{#each data.navItems}}
             <li>
-                <a href="https://github.com/kdaisho/Blog/wiki" target="_blank">
-                    <img class="nav-icon" src="/images/icon-blog-opt.svg" alt="notebook">
-                    <span></span>BLOG
+                <a href="{{this.url}}" target="_blank">
+                    <img class="nav-icon" src="/images/{{this.fileName}}" alt="{{this.name}}">
+                    <span></span>{{this.name}}
                 </a>
             </li>
-            <li>
-                <a href="#about" class="link"><img class="nav-icon" src="/images/icon-about-opt.svg"
-                        onError="this.onerror=null; this.src='/dist/images/icon-about.png'" alt="about me">
-                    <span></span>ABOUT
-                </a>
-            </li>
-            <li>
-                <a href="#work" class="link"><img class="nav-icon" src="/images/icon-work-opt.svg"
-                        onError="this.onerror=null; this.src='/dist/images/icon-work.png'" alt="my work">
-                    <span></span>PROJECTS
-                </a>
-            </li>
-            <li>
-                <a href="#contact" class="link"><img class="nav-icon" src="/images/icon-contact-opt.svg"
-                        onError="this.onerror=null; this.src='/dist/images/icon-contact.png'" alt="contact me">
-                    <span></span>CONTACT
-                </a>
-            </li>
-            <img id="close-nav" src="/images/close-btn.svg"
-                onError="this.onerror=null; this.src='/dist/images/close-btn.png'" alt="close menu">
+            {{/each}}
+            <img id="close-nav" src="/images/close-btn.svg" alt="close menu">
         </ul>
     </header>
     {{{ body }}}
+
+    <script src="/dist/main.bundle.js"></script>
 </body>
 
 </html>

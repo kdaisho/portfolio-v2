@@ -4,6 +4,7 @@ const path = require("path");
 const expressHandlebars = require("express-handlebars");
 const routes = require("./routes");
 const helpers = require("./helpers");
+const data = require("./data");
 
 const app = express();
 // app.use(favicon(path.join(__dirname, "public", "favicon.icon")));
@@ -12,7 +13,8 @@ const ehbs = expressHandlebars.create({
     extname: ".hbs",
     defaultLayout: "main",
     helpers: {
-        getIcon: name => helpers.icon(name)
+        getIcon: name => helpers.icon(name),
+        getYear: () => helpers.getYear()
     }
 });
 
@@ -41,6 +43,11 @@ app.use(
         extended: true
     })
 );
+
+app.use((req, res, next) => {
+    res.locals.data = data;
+    next();
+});
 
 app.use("/", routes);
 

@@ -1,1 +1,208 @@
-<h1>Hi</h1>
+<section class="hero">
+    <div class="title">
+        <h1>DAISHO<br>KOMIYAMA</h1>
+        <h2>Front-end Developer</h2>
+    </div>
+</section>
+
+<a class="dest-link"></a>
+<div class="wrapper">
+    <section class="about">
+        <img class="tape" src="images/scotch-tape.png" alt="scotch tape">
+        <div class="about-top about-styles">
+            <img src="images/daisho-profile.png" alt="daisho komiyama">
+            <div class="my-name">
+                <h2>Daisho Komiyama</h2>
+                <h4>(die-show, komi-yama)</h4>
+            </div>
+        </div>
+        <div class="about-bottom about-styles shadows">
+            <div class="about-title">
+                <h3>A bit about myself</h3>
+                <img src="images/flag-canada.png" alt="flag of canada">
+                <img src="images/flag-japan.png" alt="flag of japan">
+            </div>
+            <div class="about-content">
+                <p>
+                    Hello! I’m a front-end developer based in Montreal. I’m passionate about building clean, fast
+                    websites, capitalizing on my educations and experience in applying best practices in this field.
+                </p>
+                <p>
+                    You may spot me in a cafe or bar in the city, or on Mont Saint&#8209;Sauveur striving to learn how
+                    to fly! (<a href="//www.youtube.com/watch?v=_nkH4_fHZSE" target="_blank">see video</a>)
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="edu-skills">
+        <div class="educations">
+            <h2>Education</h2>
+            <div class="cards">
+                {{#each data.cards}}
+                <div class="card">
+                    <div class="side-a {{this.institution}}-a card-style">
+                        <img src="/images/{{this.url}}-logo.png" alt="{{this.institution}}">
+                        <p>{{this.period}}</p>
+                        <p>{{this.location}}</p>
+                    </div>
+                    <div class="side-b {{this.institution}}-b card-style">
+                        <div class="v-align">
+                            <div class="edu-title">
+                                <h4>{{this.title}}</h4>
+                            </div>
+                            <p>{{this.description}}</p>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+        <div class="skills" data-ng-controller="skillsCtrl">
+            <h2>Skills &amp; Experiences</h2>
+            <div id="wrap_skill" class="wrap-skill">
+
+                {{#each data.skills}}
+                <div class="container-app">
+                    <img class="icon-skill" src="/images/icon-{{this.url}}.png" alt="{{this.alt}}">
+                    <div class="state-prog">
+                        <div class="state">
+                            <span class="{{this.eh}}">|</span>
+                            <span class="{{this.okay}}">|</span>
+                            <span class="{{this.good}}">|</span>
+                            <span class="{{this.ninja}}">|</span>
+                        </div>
+                        <div class="wrap-prog">
+                            <div class="prog-bar {{this.skill}}"><span>{{this.alt}}</span></div>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+
+            </div>
+        </div>
+    </section>
+
+    <a class="dest-link"></a>
+    <section class="my-work goto-work" data-ng-controller="galleryCtrl">
+
+        <h2>Personal Projects (2015&nbsp;&#8209;&nbsp;{{getYear}})</h2>
+        <div id="wrap-thumbs">
+            {{#each data.works}}
+            <div class="wrap-thumb">
+                <div>
+                    <span class="my-work-desc">{{this.title}}<br>{{this.desc}}</span>
+                    <p class="my-work-touchpanel" data-pos="{{this.pos}}"></p>
+                </div>
+                <img src="/images/{{this.url}}" alt="{{this.alt}}">
+            </div>
+            {{/each}}
+        </div>
+
+    </section>
+
+    <section class="my-work">
+        <!-- Contribution Calendar Widget -->
+        <script src="//cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.min.js"></script>
+        <h2>Github Contributions</h2>
+        <!-- Prepare a container for your calendar -->
+        <div class="calendar"></div>
+
+        <script>
+            new GitHubCalendar('.calendar', 'kdaisho');
+        </script>
+
+        <a class="repositories" href="//github.com/kdaisho?tab=repositories" target="_blank">
+            See all repositories &gt;
+        </a>
+
+        <div id="gal_holder">
+            <div id="img_holder"></div>
+            <div id="desc_holder"></div>
+            <div id="close_btn">
+                <img src="images/close-btn.svg" onError="this.onerror=null; this.src='images/close-btn.png'"
+                    alt="close">
+            </div>
+            <div>
+                <img id="prev" class="arrow" src="images/arrow-prev.svg"
+                    onError="this.onerror=null; this.src='images/arrow-prev.png'" alt="previous" data-pos="0">
+            </div>
+            <div>
+                <img id="next" class="arrow" src="images/arrow-next.svg"
+                    onError="this.onerror=null; this.src='images/arrow-next.png'" alt="next" data-pos="0">
+            </div>
+        </div>
+    </section>
+
+    <div id="modal_bg"></div>
+    <section class="contact goto-contact">
+        <a class="dest-link"></a> <!-- HTML5: anchor without an href attribute is valid -->
+        <p>I'd like to hear from you. If you'd like more information about me, please fill out the form.<br>I'll get
+            back to you ASAP!</p>
+        <div class="btn-holder">
+            <div id="modal_trigger">CONTACT</div>
+            <div id="modal-overlay">
+                <div class="modal-wrap">
+                    <img id="modal_close" class="" src="images/close-btn.svg"
+                        onError="this.onerror=null; this.src='images/close-btn.png'" alt="close">
+                    <form id="form" name="myForm" onsubmit="return false" data-ng-controller="validateCtrl">
+                        <h3>Questions or comments?</h3>
+                        <div class="form-child">
+                            <label for="user">Name:</label>
+                            <input id="user" type="text" placeholder="name" name="user" data-ng-model="user" required>
+                            <span data-ng-show="myForm.user.$dirty && myForm.user.$invalid">
+                                <span data-ng-show="myForm.user.$error.required">Name is required</span>
+                            </span>
+                        </div>
+                        <div class="form-child">
+                            <label for="email">Email:</label>
+                            <input id="email" type="email" placeholder="email" name="email" data-ng-model="email"
+                                required>
+                            <span data-ng-show="myForm.email.$dirty && myForm.email.$invalid">
+                                <span data-ng-show="myForm.email.$error.required">Email is required</span>
+                                <span data-ng-show="myForm.email.$error.email">Invalid email address</span>
+                            </span>
+                        </div>
+                        <div class="form-child">
+                            <label for="message">Message:</label>
+                            <textarea id="message" placeholder="message" name="message" rows="5" cols="30"></textarea>
+                        </div>
+                        <button id="submit" class="form-child"
+                            data-ng-disabled="myForm.user.$dirty && myForm.user.$invalid || myForm.email.$dirty && myForm.email.$invalid">SEND</button>
+                        <div style="clear: both;"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="contact-info">
+            <p>Daisho Komiyama</p>
+            <p>Front-end Developer</p>
+            <a href="mailto:daishokomiyama@gmail.com?Subject=Hello%20" target="_top">daishokomiyama@gmail.com</a>
+            <ul class="social-icons">
+                <li>
+                    <a href="//www.facebook.com/daisho.komiyama" target="_blank">
+                        <img src="images/icon-fb.svg" onError="this.onerror=null; this.src='images/icon-fb.png'"
+                            alt="facebook">
+                    </a>
+                </li>
+                <li>
+                    <a href="//www.linkedin.com/in/daisho-komiyama-6766657a?trk=nav_responsive_tab_profile_pic"
+                        target="_blank">
+                        <img src="images/icon-linkedin.svg"
+                            onError="this.onerror=null; this.src='images/icon-linkedin.png'" alt="linkedin">
+                    </a>
+                </li>
+                <li>
+                    <a href="//github.com/kdaisho" target="_blank">
+                        <img src="images/github.svg" onError="this.onerror=null; this.src='images/github.png'"
+                            alt="github">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+</div>
+<div class="btm-statement" data-ng-controller="timeCtrl">
+    <div class="wrapper">
+        <p>&#169; Copyright {{getYear}} All Rights Reserved.</p>
+    </div>
+</div>
