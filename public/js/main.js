@@ -3,6 +3,7 @@ import init from "./modules/init";
 import resizeLogo from "./modules/resizeLogo";
 import navigation from "./modules/navigation";
 import carousel from "./modules/carousel";
+import progressBar from "./modules/progressbar";
 import data from "../../data";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -10,4 +11,5 @@ document.addEventListener("DOMContentLoaded", () => {
     resizeLogo();
     navigation();
     carousel(data);
+    progressBar();
 });

@@ -366,10 +366,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sass_style_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_sass_style_scss__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _modules_init__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/init */ "./public/js/modules/init.js");
 /* harmony import */ var _modules_resizeLogo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/resizeLogo */ "./public/js/modules/resizeLogo.js");
-/* harmony import */ var _modules_navigation__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/navigation */ "./public/js/modules/navigation.js");
+/* harmony import */ var _modules_navigation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/navigation */ "./public/js/modules/navigation.js");
 /* harmony import */ var _modules_carousel__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/carousel */ "./public/js/modules/carousel.js");
-/* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../data */ "./data.js");
-/* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_data__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _modules_progressbar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/progressbar */ "./public/js/modules/progressbar.js");
+/* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../data */ "./data.js");
+/* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_data__WEBPACK_IMPORTED_MODULE_6__);
+
 
 
 
@@ -379,8 +381,9 @@ __webpack_require__.r(__webpack_exports__);
 document.addEventListener("DOMContentLoaded", function () {
   Object(_modules_init__WEBPACK_IMPORTED_MODULE_1__["default"])();
   Object(_modules_resizeLogo__WEBPACK_IMPORTED_MODULE_2__["default"])();
-  Object(_modules_navigation__WEBPACK_IMPORTED_MODULE_6__["default"])();
-  Object(_modules_carousel__WEBPACK_IMPORTED_MODULE_4__["default"])(_data__WEBPACK_IMPORTED_MODULE_5___default.a);
+  Object(_modules_navigation__WEBPACK_IMPORTED_MODULE_3__["default"])();
+  Object(_modules_carousel__WEBPACK_IMPORTED_MODULE_4__["default"])(_data__WEBPACK_IMPORTED_MODULE_6___default.a);
+  Object(_modules_progressbar__WEBPACK_IMPORTED_MODULE_5__["default"])();
 });
 
 /***/ }),
@@ -521,6 +524,34 @@ var navigation = function navigation() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (navigation);
+
+/***/ }),
+
+/***/ "./public/js/modules/progressbar.js":
+/*!******************************************!*\
+  !*** ./public/js/modules/progressbar.js ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var progressBar = function progressBar() {
+  var target = document.getElementById("wrap_skill");
+
+  var addClassName = function addClassName() {
+    if (target.getBoundingClientRect().top + 100 <= window.innerHeight) {
+      target.classList.add("grow-bar");
+      document.removeEventListener("scroll", addClassName);
+    }
+  };
+
+  document.addEventListener("scroll", addClassName, {
+    passive: true
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (progressBar);
 
 /***/ }),
 
