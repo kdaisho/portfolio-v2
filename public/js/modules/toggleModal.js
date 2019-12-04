@@ -6,7 +6,6 @@ const contact = () => {
         "click",
         () => {
             overlay.classList.add("modal-on");
-            console.log("lanch");
         },
         false
     );

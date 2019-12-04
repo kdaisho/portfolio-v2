@@ -62,16 +62,15 @@
                 padding: 0.3em;
             }
 
-            h3 {
+            .heading {
                 color: #fff;
+                margin-bottom: 0.5em;
             }
 
             form {
-                div {
-                    margin: 0.4em 2em 0 0;
-                    text-align: left;
+                .form-child {
+                    margin-bottom: 1em;
                     span {
-                        // validation error message
                         display: block;
                         color: #fd3b3b;
                         padding: 0.2em 0 0 0.1em;
@@ -80,17 +79,19 @@
                 label {
                     font: 100%/1.6 "Roboto", Arial, sans-serif;
                     color: #fff;
-                    padding-left: 0.1em;
-                    vertical-align: top;
-                    width: 78px;
                     display: block;
+                    padding-bottom: 0.25em;
+                    text-align: left;
+                    width: 78px;
                 }
 
                 input {
-                    height: 1.8em;
-                    padding: 0 0.3em;
-                    font-size: 0.9em;
+                    box-sizing: border-box;
+                    border: transparent;
+                    border-radius: 0.25em;
                     color: #555;
+                    height: 1.8em;
+                    padding: 0.3em;
                     width: 100%;
                     &:focus {
                         outline: 2px solid #3ed847;
@@ -98,29 +99,44 @@
                 }
 
                 textarea {
-                    padding: 0.3em;
-                    font-size: 0.9em;
+                    box-sizing: border-box;
+                    border-radius: 0.25em;
                     color: #555;
+                    padding: 0.3em;
+                    width: 100%;
                     &:focus {
                         outline: 2px solid #3ed847;
                     }
                 }
+
                 button {
                     background: linear-gradient(to bottom, #3ed847, #1f9226);
-                    border-radius: 3px;
+                    border: none;
+                    border-radius: 0.25em;
                     color: #fff;
                     font-size: 1.2em;
-                    padding: 0.2em 2em 0.3em;
-                    border: none;
-                    cursor: pointer;
-                    outline: none;
+                    height: 35px;
+                    line-height: 35px;
                     margin-top: 1em;
+                    outline: none;
+                    width: 100%;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
 
                     &:disabled {
                         color: #3ed847;
-                        cursor: initial;
+                        &:hover {
+                            cursor: not-allowed;
+                        }
                     }
                 }
+            }
+
+            form:invalid > #submit {
+                opacity: 0.5;
+                pointer-events: none;
             }
         }
 

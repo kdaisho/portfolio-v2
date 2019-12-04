@@ -5,6 +5,7 @@ import navigation from "./modules/navigation";
 import carousel from "./modules/carousel";
 import progressBar from "./modules/progressbar";
 import toggleModal from "./modules/toggleModal";
+// import sendEmail from "./modules/sendEmail";
 import data from "../../data";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -14,4 +15,5 @@ document.addEventListener("DOMContentLoaded", () => {
     carousel(data);
     progressBar();
     toggleModal();
+    // sendEmail();
 });

@@ -1,0 +1,57 @@
+<section class="contact goto-contact">
+    <a class="dest-link"></a>
+    <p>I'd like to hear from you. If you'd like more information about me, please fill out the form.<br>I'll get
+        back to you ASAP!</p>
+    <div class="btn-holder">
+        <div id="modal_trigger">CONTACT</div>
+        <div id="modal-overlay">
+            <div class="modal-wrap">
+                <img id="modal_close" src="images/close-btn.svg" alt="close">
+                <form id="form" name="myForm" action="/send" method="POST">
+                    {{!-- <form id="form" name="myForm" onsubmit="return false"> --}}
+                    <h3 class="heading">Questions or comments?</h3>
+                    <div class="form-child">
+                        <label for="name">Name:</label>
+                        <input id="name" type="text" placeholder="Name" name="name" required>
+                    </div>
+                    <div class="form-child" style="display: none">
+                        <label for="address">Address:</label>
+                        <input id="address" type="text" placeholder="Address" name="address">
+                    </div>
+                    <div class="form-child">
+                        <label for="email">Email:</label>
+                        <input id="email" type="email" placeholder="Email" name="email" required>
+                    </div>
+                    <div class="form-child">
+                        <label for="message">Message:</label>
+                        <textarea id="message" placeholder="Message" name="message" rows="5"></textarea>
+                    </div>
+                    <button id="submit" class="form-child">SEND</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="contact-info">
+        <p>Daisho Komiyama</p>
+        <p>Front-end Developer</p>
+        <a href="mailto:daishokomiyama@gmail.com?Subject=Hello%20" target="_top">daishokomiyama@gmail.com</a>
+        <ul class="social-icons">
+            <li>
+                <a href="//www.facebook.com/daisho.komiyama" target="_blank">
+                    <img src="images/icon-fb.svg" alt="facebook">
+                </a>
+            </li>
+            <li>
+                <a href="//www.linkedin.com/in/daisho-komiyama-6766657a?trk=nav_responsive_tab_profile_pic"
+                    target="_blank">
+                    <img src="images/icon-linkedin.svg" alt="linkedin">
+                </a>
+            </li>
+            <li>
+                <a href="//github.com/kdaisho" target="_blank">
+                    <img src="images/github.svg" alt="github">
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
