@@ -369,8 +369,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_navigation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/navigation */ "./public/js/modules/navigation.js");
 /* harmony import */ var _modules_carousel__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/carousel */ "./public/js/modules/carousel.js");
 /* harmony import */ var _modules_progressbar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/progressbar */ "./public/js/modules/progressbar.js");
-/* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../data */ "./data.js");
-/* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_data__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _modules_contact__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/contact */ "./public/js/modules/contact.js");
+/* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../data */ "./data.js");
+/* harmony import */ var _data__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_data__WEBPACK_IMPORTED_MODULE_7__);
+
 
 
 
@@ -382,8 +384,9 @@ document.addEventListener("DOMContentLoaded", function () {
   Object(_modules_init__WEBPACK_IMPORTED_MODULE_1__["default"])();
   Object(_modules_resizeLogo__WEBPACK_IMPORTED_MODULE_2__["default"])();
   Object(_modules_navigation__WEBPACK_IMPORTED_MODULE_3__["default"])();
-  Object(_modules_carousel__WEBPACK_IMPORTED_MODULE_4__["default"])(_data__WEBPACK_IMPORTED_MODULE_6___default.a);
+  Object(_modules_carousel__WEBPACK_IMPORTED_MODULE_4__["default"])(_data__WEBPACK_IMPORTED_MODULE_7___default.a);
   Object(_modules_progressbar__WEBPACK_IMPORTED_MODULE_5__["default"])();
+  Object(_modules_contact__WEBPACK_IMPORTED_MODULE_6__["default"])();
 });
 
 /***/ }),
@@ -477,6 +480,32 @@ var carousel = function carousel(data) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (carousel);
+
+/***/ }),
+
+/***/ "./public/js/modules/contact.js":
+/*!**************************************!*\
+  !*** ./public/js/modules/contact.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var contact = function contact() {
+  var modalTrigger = document.getElementById("modal_trigger");
+  var modalClose = document.getElementById("modal_close");
+  var overlay = document.getElementById("modal-overlay");
+  modalTrigger.addEventListener("click", function () {
+    overlay.classList.add("modal-on");
+    console.log("lanch");
+  }, false);
+  modalClose.addEventListener("click", function () {
+    overlay.classList.remove("modal-on");
+  }, false);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (contact);
 
 /***/ }),
 
