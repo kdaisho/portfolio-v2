@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="no-touch">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -37,17 +37,17 @@
             </li>
             {{/each}}
         </ul>
-        <img id="main-menu" src="/images/menu.svg" alt="menu">
+        <img id="main_menu" class="main-menu" src="/images/menu.svg" alt="menu">
         <ul id="nav" class="nav" style="right: -320px;">
             {{#each data.navItems}}
             <li>
-                <a href="{{this.url}}" target="_blank">
+                <a href="{{this.url}}" class="{{this.className}}" target="{{this.target}}">
                     <img class="nav-icon" src="/images/{{this.fileName}}" alt="{{this.name}}">
-                    <span></span>{{this.name}}
+                    <span class="menuIcon"></span>{{this.name}}
                 </a>
             </li>
             {{/each}}
-            <img id="close-nav" src="/images/close-btn.svg" alt="close menu">
+            <img id="close_nav" class="close-nav" src="/images/close-btn.svg" alt="close menu">
         </ul>
     </header>
     {{{ body }}}

@@ -191,18 +191,18 @@ path {
   .social-icons li {
     align-self: center; }
 
-#main-menu {
+.main-menu {
   display: none;
   margin: 0 0.6em 0 1em; }
-  #main-menu:hover {
+  .main-menu:hover {
     cursor: pointer; }
 
-#close-nav {
+.close-nav {
   width: 40px;
   padding: 0.75em;
   float: right;
   display: none; }
-  #close-nav:hover {
+  .close-nav:hover {
     cursor: pointer; }
 
 @media (max-width: 767px) {
@@ -210,7 +210,7 @@ path {
     margin: 0 0.8em; }
   .social-icons li {
     align-self: center; }
-  #main-menu {
+  .main-menu {
     display: block; }
   .nav {
     flex-direction: column;
@@ -232,19 +232,14 @@ path {
         margin: 0;
         transition: none;
         box-shadow: 0 3px 0px #fff; }
-        .nav li a .no-touch:hover {
-          transition: none;
-          padding: 16px 15px 11px 25px; }
-        .nav li a .no-touch .nav-icon {
-          top: 16px; }
-        .nav li a .no-touch span {
+        .nav li a span .menuIcon {
           display: none; }
         .nav li a .nav-icon {
           left: 12px;
           top: 16px; }
         .nav li a span {
           display: none; }
-    .nav #close-nav {
+    .nav .close-nav {
       display: block;
       margin-left: auto; } }
 

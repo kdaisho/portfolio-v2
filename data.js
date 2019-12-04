@@ -21,21 +21,25 @@ exports.navItems = [
     {
         url: "https://github.com/kdaisho/Blog/wiki",
         fileName: "icon-blog-opt.svg",
+        target: "_blank",
         name: "BLOG"
     },
     {
         url: "#about",
         fileName: "icon-about-opt.svg",
+        className: "link",
         name: "ABOUT"
     },
     {
         url: "#work",
         fileName: "icon-work-opt.svg",
+        className: "link",
         name: "PROJECTS"
     },
     {
         url: "#contact",
         fileName: "icon-contact-opt.svg",
+        className: "link",
         name: "CONTACT"
     }
 ];
@@ -189,5 +193,98 @@ exports.works = [
         title: "CSS Grid",
         desc: "Navy Vessels",
         pos: 0
+    }
+];
+
+exports.bigsrc = [
+    {
+        url: "pan-navy-css-grid.jpg",
+        id: 0,
+        title: "Royal Canadian Navy Vessels",
+        desc: "Navy vessels catalog using CSS&nbsp;grid",
+        link: "//daishodesign.com/sites/navy/"
+    },
+    {
+        url: "pan-countdown.gif",
+        id: 1,
+        title: "Countdown Timer",
+        desc: "Micro widget with JavaScript",
+        link: "//github.com/kdaisho/Countdown"
+    },
+    {
+        url: "pan-quebec3.jpg",
+        id: 2,
+        title: "Quebec3",
+        desc: "CMS with Laravel",
+        link: "https://quebec3.com"
+    },
+    {
+        url: "pan-french-formatter.gif",
+        id: 3,
+        title: "French Formatter",
+        desc: "Non-braking space injector tool with JavaScript",
+        link: "//daishodesign.com/sites/formatter/"
+    },
+    {
+        url: "pan-email-builder.jpg",
+        id: 4,
+        title: "Email Builder3",
+        desc: "Email building tool with Angular4",
+        link: ""
+    },
+    {
+        url: "pan-mybrailler.gif",
+        id: 5,
+        title: "My Brailler",
+        desc: "Braille typewriting practice site with Angular4",
+        link: "//mybrailler.com"
+    },
+    {
+        url: "pan-canvas-game.jpg",
+        id: 6,
+        title: "HTML Canvas Game",
+        desc: "HTML Canvas Game with Pure JavaScript",
+        link: "//daishodesign.com/sites/breakout/"
+    },
+    {
+        url: "pan-canvas-game-phaser.jpg",
+        id: 7,
+        title: "HTML Canvas Game",
+        desc: "HTML Canvas Game with Phaser2",
+        link: "//daishodesign.com/sites/breakout-phaser/"
+    },
+    {
+        url: "pan-pipe-game.jpg",
+        id: 8,
+        title: "Super Casual Game",
+        desc: "'Building game within 2 hours' project"
+    },
+    {
+        url: "pan-stashash.jpg",
+        id: 9,
+        title: "StasHash",
+        desc: "Private Hash Generator",
+        link: "//daishodesign.com/sites/stashash/#/list"
+    },
+    {
+        url: "pan-infographic-suicide.jpg",
+        id: 10,
+        title: "CSS Grid Infographic",
+        desc: "Infographic using CSS Grid",
+        link: "//daishodesign.com/sites/infographic"
+    },
+    {
+        url: "pan-flappy-box.jpg",
+        id: 11,
+        title: "Flappy Box",
+        desc: "Flappy Bird clone using Phaser",
+        link: "//daishodesign.com/sites/flappy-box"
+    },
+    {
+        url: "pan-sound-kit.jpg",
+        id: 12,
+        title: "Japan Sound Kit",
+        desc: "Drun kit with Japan sound using native JS",
+        link: "//daishodesign.com/sites/sound-kit"
     }
 ];

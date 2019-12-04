@@ -57,7 +57,7 @@
                 {{/each}}
             </div>
         </div>
-        <div class="skills" data-ng-controller="skillsCtrl">
+        <div class="skills">
             <h2>Skills &amp; Experiences</h2>
             <div id="wrap_skill" class="wrap-skill">
 
@@ -83,8 +83,7 @@
     </section>
 
     <a class="dest-link"></a>
-    <section class="my-work goto-work" data-ng-controller="galleryCtrl">
-
+    <section class="my-work goto-work">
         <h2>Personal Projects (2015&nbsp;&#8209;&nbsp;{{getYear}})</h2>
         <div id="wrap-thumbs">
             {{#each data.works}}
@@ -97,7 +96,6 @@
             </div>
             {{/each}}
         </div>
-
     </section>
 
     <section class="my-work">
@@ -201,7 +199,7 @@
         </div>
     </section>
 </div>
-<div class="btm-statement" data-ng-controller="timeCtrl">
+<div class="btm-statement">
     <div class="wrapper">
         <p>&#169; Copyright {{getYear}} All Rights Reserved.</p>
     </div>
