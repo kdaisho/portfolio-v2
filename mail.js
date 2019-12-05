@@ -12,7 +12,7 @@ const transport = nodemailer.createTransport({
 exports.sendMessage = (req, res) => {
     // Honeypot
     if (req.body.address) {
-        popup("You are not human.");
+        req.flash("danger", `Has it going? Agent Smith.`);
         res.redirect("/");
         return false;
     }
