@@ -1,7 +1,4 @@
 const nodemailer = require("nodemailer");
-const popup = require("alert-node");
-// const postMessage = require("");
-// const promisify = require("es6-promisify");
 
 const transport = nodemailer.createTransport({
     host: process.env.MAIL_HOST,
@@ -38,7 +35,10 @@ exports.sendMessage = (req, res) => {
         if (error) {
             console.error(error);
         } else {
-            popup(`Thank you ${sender.name}, I'll get back to you soon!`);
+            req.flash(
+                "success",
+                `Thank you ${sender.name}, I'll get back to you soon!`
+            );
             res.redirect("/");
         }
     });

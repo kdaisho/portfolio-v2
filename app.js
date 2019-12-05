@@ -1,5 +1,7 @@
 const express = require("express");
-const favicon = require("serve-favicon");
+const flash = require("connect-flash");
+const session = require("express-session");
+const cookieParser = require("cookie-parser");
 const path = require("path");
 const expressHandlebars = require("express-handlebars");
 const routes = require("./routes");
@@ -7,7 +9,6 @@ const helpers = require("./helpers");
 const data = require("./data");
 
 const app = express();
-// app.use(favicon(path.join(__dirname, "public", "favicon.icon")));
 
 const ehbs = expressHandlebars.create({
     extname: ".hbs",
@@ -43,9 +44,13 @@ app.use(
         extended: true
     })
 );
+app.use(cookieParser("daicat"));
+app.use(session({ cookie: { maxAge: 60000 } }));
+app.use(flash());
 
 app.use((req, res, next) => {
     res.locals.data = data;
+    res.locals.flashes = req.flash();
     next();
 });
 

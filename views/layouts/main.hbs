@@ -51,7 +51,13 @@
         </ul>
     </header>
     {{{ body }}}
-
+    <div class="flash-messages">
+        {{#each flashes}}
+        <div id="flashMessage" class="flash flash--{{@key}}">
+            {{this}} <button id="flashClose">X</button>
+        </div>
+        {{/each}}
+    </div>
     <script src="/dist/main.bundle.js"></script>
 </body>
 
