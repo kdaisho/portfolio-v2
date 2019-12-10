@@ -23,11 +23,11 @@ const carousel = data => {
         imgHolder.innerHTML = `<img id="data_img" src="images/${bigsrc[pos].url}" data-id="${bigsrc[pos].id}">`;
         descHolder.innerHTML = `<h4>${bigsrc[pos].title}</h4><p>${bigsrc[pos].desc}</p>`;
 
-        if (pos !== 4 && pos !== 8) {
+        if (bigsrc[pos].link) {
             const anchor = document.createElement("a");
             anchor.href = bigsrc[pos].link;
             anchor.setAttribute("target", "_blank");
-            anchor.innerHTML = "Visit website";
+            anchor.innerHTML = "VIEW DEMO";
             descHolder.appendChild(anchor);
         }
     };
