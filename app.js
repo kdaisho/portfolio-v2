@@ -44,7 +44,7 @@ app.use(
         extended: true
     })
 );
-app.use(cookieParser("daicat"));
+app.use(cookieParser("daicat2"));
 app.use(session({ cookie: { maxAge: 60000 } }));
 app.use(flash());
 
