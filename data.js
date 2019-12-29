@@ -104,6 +104,13 @@ exports.skills = [
 
 exports.works = [
     {
+        url: "work-jsbest.jpg",
+        alt: "JavaScriptBest",
+        title: "JavaScriptBest",
+        desc: "Online JS Course Review Site",
+        pos: 13
+    },
+    {
         url: "work-sound-kit.jpg",
         alt: "Japan Sound Kit",
         title: "Drum Kit",
@@ -283,5 +290,12 @@ exports.bigsrc = [
         title: "Japan Sound Kit",
         desc: "Cool drum kit using vanilla JS",
         link: "https://kdaisho.github.io/Japan_Sound_Board/"
+    },
+    {
+        url: "pan-jsbest.jpg",
+        id: 13,
+        title: "JavaScriptBest",
+        desc: "Online JS course review site",
+        link: "https://javascriptbest.com/courses"
     }
 ];
