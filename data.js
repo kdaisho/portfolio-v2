@@ -201,14 +201,15 @@ exports.bigsrc = [
         url: "pan-navy-css-grid.jpg",
         id: 0,
         title: "Royal Canadian Navy Vessels",
-        desc: "Navy vessels catalog using CSS&nbsp;grid"
+        desc: "Navy vessels catalog using CSS&nbsp;grid",
+        link: "https://kdaisho.github.io/navy-vessels-grid/"
     },
     {
         url: "pan-countdown.gif",
         id: 1,
         title: "Countdown Timer",
         desc: "Micro widget with JavaScript",
-        link: "//github.com/kdaisho/Countdown"
+        link: "https://github.com/kdaisho/Countdown"
     },
     {
         url: "pan-quebec3.jpg",
@@ -221,7 +222,8 @@ exports.bigsrc = [
         url: "pan-french-formatter.gif",
         id: 3,
         title: "French Formatter",
-        desc: "Non-braking space injector tool with JavaScript"
+        desc: "Non-braking space injector tool with JavaScript",
+        link: "https://kdaisho.github.io/French-Formatter/"
     },
     {
         url: "pan-email-builder.jpg",
@@ -240,13 +242,15 @@ exports.bigsrc = [
         url: "pan-canvas-game.jpg",
         id: 6,
         title: "HTML Canvas Game",
-        desc: "HTML Canvas Game with Pure JavaScript"
+        desc: "HTML Canvas Game with Pure JavaScript",
+        link: "https://kdaisho.github.io/Game_Breakout/"
     },
     {
         url: "pan-canvas-game-phaser.jpg",
         id: 7,
         title: "HTML Canvas Game",
-        desc: "HTML Canvas Game with Phaser2"
+        desc: "HTML Canvas Game with Phaser2",
+        link: "https://kdaisho.github.io/Game_Breakout_Phaser2/"
     },
     {
         url: "pan-pipe-game.jpg",
@@ -264,7 +268,8 @@ exports.bigsrc = [
         url: "pan-infographic-suicide.jpg",
         id: 10,
         title: "CSS Grid Infographic",
-        desc: "Infographic using CSS Grid"
+        desc: "Infographic using CSS Grid",
+        link: "https://kdaisho.github.io/Infographic/"
     },
     {
         url: "pan-flappy-box.jpg",
@@ -276,6 +281,7 @@ exports.bigsrc = [
         url: "pan-sound-kit.jpg",
         id: 12,
         title: "Japan Sound Kit",
-        desc: "Cool drum kit using vanilla JS"
+        desc: "Cool drum kit using vanilla JS",
+        link: "https://kdaisho.github.io/Japan_Sound_Board/"
     }
 ];

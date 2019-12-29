@@ -27,7 +27,7 @@ const carousel = data => {
             const anchor = document.createElement("a");
             anchor.href = bigsrc[pos].link;
             anchor.setAttribute("target", "_blank");
-            anchor.innerHTML = "VIEW DEMO";
+            anchor.innerHTML = "Visit";
             descHolder.appendChild(anchor);
         }
     };
