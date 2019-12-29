@@ -57,10 +57,10 @@
 }
 
 .card {
+    display: block;
     position: relative;
     user-select: none;
     -webkit-user-select: none;
-    cursor: pointer;
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
     -ms-transform-style: preserve-3d;
@@ -70,6 +70,9 @@
     p {
         text-align: center;
         color: #fff;
+    }
+    &:hover {
+        cursor: pointer;
     }
 }
 
@@ -81,7 +84,6 @@
 
 .side-a,
 .side-b {
-    display: block;
     -webkit-transition: 1s;
     -moz-transition: 1s;
     transition: 1s;
