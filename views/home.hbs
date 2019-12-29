@@ -40,7 +40,7 @@
             <h2>Education</h2>
             <div class="cards">
                 {{#each data.cards}}
-                <div class="card">
+                <div class="card" onclick="return true">
                     <div class="side-a {{this.institution}}-a card-style">
                         <img src="/images/{{this.url}}-logo.png" alt="{{this.institution}}">
                         <p>{{this.period}}</p>
