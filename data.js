@@ -295,7 +295,7 @@ exports.bigsrc = [
         url: "pan-jsbest.jpg",
         id: 13,
         title: "JavaScriptBest",
-        desc: "Online JS course review site",
+        desc: "Web Application using Nodejs",
         link: "https://javascriptbest.com/courses"
     }
 ];
