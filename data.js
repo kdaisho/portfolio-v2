@@ -46,6 +46,14 @@ exports.navItems = [
 
 exports.cards = [
     {
+        institution: "frontendmasters",
+        period: "2018 - Present",
+        url: "frontendmasters",
+        title: "Front-end development",
+        location: "Online",
+        description: "In-depth, modern JavaScript engineering"
+    },
+    {
         institution: "treehouse",
         period: "2015 - 2017",
         url: "treehouse",
@@ -71,15 +79,6 @@ exports.cards = [
         location: "Shizuoka, Japan",
         description:
             "Army doctrine / tactics; offensive, defensive and maneuver companies / battalions; etc."
-    },
-    {
-        institution: "hokkai",
-        period: "1996 - 2000",
-        url: "hokkai",
-        title: "Bachelor of Laws",
-        location: "Sapporo, Japan",
-        description:
-            "Legal method and procedures, Criminal law, Administrative law, Law of property; etc."
     }
 ];
 
@@ -95,7 +94,7 @@ exports.skills = [
     },
     { url: "html5", alt: "HTML", skill: "htm" },
     { url: "css3", alt: "CSS", skill: "css" },
-    { url: "php", alt: "PHP", skill: "php" },
+    { url: "nodejs", alt: "Nodejs", skill: "nodejs" },
     { url: "angular", alt: "Angular", skill: "angular" },
     { url: "ps", alt: "Photoshop", skill: " ps" },
     { url: "git", alt: "Git", skill: "git" },

@@ -143,6 +143,14 @@
     height: 236px;
     margin: 9px;
     box-shadow: 3px 3px 6px #777;
+    &.frontendmasters-a,
+    &.frontendmasters-b {
+        border: 4px solid $fem;
+        h4,
+        p {
+            color: $fem;
+        }
+    }
 }
 
 .edu-title {
@@ -208,19 +216,9 @@
     }
 }
 
-.hokkai-a {
-    background: $hokkai;
-
+.frontendmasters-a {
     img {
-        margin: 70px auto 56px;
+        margin: 50px auto 72px;
         display: block;
-    }
-}
-.hokkai-b {
-    border: 3px solid $hokkai;
-
-    h4,
-    p {
-        color: $hokkai;
     }
 }
